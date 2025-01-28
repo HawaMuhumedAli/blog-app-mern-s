@@ -32,7 +32,7 @@ mongoose.connect('mongodb+srv://luulh32:a9C34eJrsZlQrAsw@cluster0.vy7k5.mongodb.
 
 // Set up routes for different APIs
 app.use('/api/user', userRoutes);       // User-related routes (e.g., get all users)
-app.use('/api/auth', authRoutes);       // Authentication routes (e.g., login, register, logout)
+app.use('/api/auth', authRoutes);       // Authenticatitgion routes (e.g., login, register, logout)
 app.use('/api/post', postRoutes);       // Post-related routes (e.g., create, get posts)
 app.use('/api/report', reportRoutes);   // Report-related routes (e.g., get report, admin only)
 
