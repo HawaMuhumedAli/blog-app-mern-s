@@ -28,7 +28,7 @@ export default function DashSidebar() {
         console.log(data.message);
       } else {
         setUserInfo(null); // Clear user info from context
-        navigate('/'); // Redirect to the home page
+        navigate('/'); // Redirect to the home pages
       }
     } catch (error) {
       console.log(error.message);
