@@ -12,7 +12,7 @@ export default function Header() {
       method: "POST",
     }).then(() => {
       setUserInfo(null);
-      console.log(setUserInfo); // Set userInfo to null after successful logout
+      console.log(setUserInfo); 
     });
   }
 
