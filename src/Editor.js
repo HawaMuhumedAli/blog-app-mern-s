@@ -4,7 +4,7 @@ export default function Editor({value,onChange}) {
   const modules = {
     toolbar: [
       [{ header: [1, 2, false] }],
-      ['bold', 'italic', 'underline', 'strike', 'blockquote'],//Editor task
+      ['bold', 'italic', 'underline', 'strike', 'blockquote'],
       [
         { list: 'ordered' },
         { list: 'bullet' },
