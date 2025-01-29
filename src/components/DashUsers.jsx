@@ -518,7 +518,7 @@ export default function DashUsers() {
         !loading && <p>You have no users yet!</p>
       )}
 
-      {/* Modal for deleting a user */}
+      {/* Modals for deleting a user */}
       <div
         className={`fixed inset-0 bg-gray-600 bg-opacity-50 flex justify-center items-center transition-opacity duration-300 ease-in-out ${showModal ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}
         onClick={() => setShowModal(false)}
