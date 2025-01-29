@@ -15,7 +15,7 @@ export default function DashboardComp() {
         const res = await fetch(`${baseURL}${endpoint}`);
         const data = await res.json();
         
-        // Log the response to check what we are getting
+        // Log the responses to check what we are getting
         console.log(`Fetched data from ${endpoint}:`, data);
 
         if (res.ok) {
