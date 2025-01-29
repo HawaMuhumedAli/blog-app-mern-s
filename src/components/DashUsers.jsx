@@ -382,7 +382,7 @@ export default function DashUsers() {
         if (res.status === 200) {
           const newUsers = res.data.users;
 
-          // Ensure no duplicates in new users by filtering out already existing users
+          // Ensures no duplicates in new users by filtering out already existing users
           const newUserIds = newUsers.map((user) => user._id);
           const uniqueUsers = [
             ...users.filter((user) => !newUserIds.includes(user._id)),
