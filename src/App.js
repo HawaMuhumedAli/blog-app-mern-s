@@ -2,7 +2,7 @@ import './App.css';
 import { Route, Routes } from 'react-router-dom';
 import { Provider } from 'react-redux'; // Import the Redux Provider
 import { store } from './redux/store'; // Assuming you have a Redux store setup
-import Layout from './Layout';
+import Layout from './Layout';//Layout
 import IndexPage from './pages/IndexPage';
 import LoginPage from './pages/LoginPage';
 import RegisterPage from './pages/RegisterPage';
