@@ -49,7 +49,7 @@ export default function Post({
     return null;
   }
 
-  // Check if userInfo is null before accessing properties
+  /// Check if userInfo is null before accessing properties
   // console.log('userInfo._id:', userInfo?.id);
   // console.log('author._id:', author._id);
 //   console.log('userInfo.id:', userInfo.id);
