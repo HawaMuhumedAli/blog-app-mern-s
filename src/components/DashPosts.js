@@ -450,7 +450,7 @@ export default function DashPosts() {
       );
 
       if (res.status === 200) {
-        // Remove the deletedd post from the list
+        // Removes the deletedd post from the list
         setPosts((prevPosts) => prevPosts.filter((post) => post._id !== postIdToDelete));
         setShowModal(false); // Close modal
       } else {
