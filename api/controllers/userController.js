@@ -71,20 +71,20 @@ exports.deleteUser = async (req, res) => {
   try {
     const userToDelete = await User.findById(userId);
     if (!userToDelete) {
-      return res.status(404).json('User not found');
+      return res.status(404).json({ message: 'User not found' });
     }
 
     // Optional: Prevent admins from deleting themselves
     if (userToDelete._id.toString() === req.user.id) {
-      return res.status(400).json('You cannot delete your own account');
+      return res.status(400).json({ message: 'You cannot delete your own account' });
     }
 
     // Use findByIdAndDelete instead of remove
     await User.findByIdAndDelete(userId); // This will directly delete the user from the database
-    res.status(200).json('User deleted successfully');
+    res.status(200).json({ message: 'User deleted successfully' });
   } catch (error) {
     console.error('Error deleting user:', error);
-    res.status(500).json('Failed to delete user');
+    res.status(500).json({ message: 'Failed to delete user' });
   }
 };
 

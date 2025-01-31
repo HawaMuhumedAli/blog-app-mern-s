@@ -140,36 +140,36 @@ const mongoose = require('mongoose');
 // Get all posts (with pagination)
 exports.createPost = async (req, res) => {
   try {
-    const { title, summary, content, authorId } = req.body;
-
-    // Log incoming data to verify fields
     console.log('Request body:', req.body);
     console.log('Uploaded file:', req.file);
 
-    // Ensure all required fields are provided
+    let { title, summary, content, authorId } = req.body;
+
+    if (!authorId) {
+      authorId = req.cookies.userId; // ✅ Get userId from cookies
+    }
+
     if (!title || !summary || !content || !authorId) {
+      console.error('Missing fields:', { title, summary, content, authorId });
       return res.status(400).json({ message: 'Missing required fields (title, summary, content, authorId)' });
     }
 
-    // Validate authorId format
     if (!mongoose.Types.ObjectId.isValid(authorId)) {
+      console.error('Invalid authorId format:', authorId);
       return res.status(400).json({ message: 'Invalid authorId format' });
     }
 
-    // Ensure a file is uploaded
     if (!req.file) {
+      console.error('File upload missing');
       return res.status(400).json({ message: 'File upload is required' });
     }
 
-    // Get file information
     const { originalname, path: filePath } = req.file;
-    const ext = originalname.split('.').pop();  // Extract the file extension
-    const newPath = path.join(filePath, `.${ext}`);  // Correct the file path using path.join()
+    const ext = originalname.split('.').pop();
+    const newPath = `${filePath}.${ext}`;
 
-    // Rename the uploaded file with the correct extension
     await fs.rename(filePath, newPath);
 
-    // Create the post in the database
     const postDoc = await Post.create({
       title,
       summary,
@@ -178,13 +178,14 @@ exports.createPost = async (req, res) => {
       author: authorId,
     });
 
-    // Respond with the created post
     res.status(201).json(postDoc);
   } catch (error) {
-    console.error('Error creating post:', error); // Log the detailed error
+    console.error('Error creating post:', error);
     res.status(500).json({ message: 'Error creating post', error: error.message });
   }
 };
+
+
 
 
 exports.getAllPosts = async (req, res) => {
