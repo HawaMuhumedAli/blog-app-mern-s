@@ -109,13 +109,7 @@ Ensure that you have the following installed:
              *User*: halimo
             *User pass*: halimo1234@r
   ![API Architecture](https://github.com/HawaMuhumedAli/blog-app-mern-s/blob/15f3fdf1b77803c220b0db8acd6ef7ce173c451a/user.png)
-- **Password Hashing** using **bcrypt**  
-- **CRUD Operations** for users and posts  
-- **MongoDB Integration** with **Mongoose**  
-- **MVC Architecture** (Models, Views, Controllers)  
-- **Error Handling and Validation**  
-- **File Upload** for post cover images using **Multer**  
-- **Pagination** for listing posts
+
 
 ...
 
