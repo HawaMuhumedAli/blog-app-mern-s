@@ -2,7 +2,7 @@
 
 This is a backend API built with **Node.js**, **Express.js**, **MongoDB**, and **JWT** (JSON Web Tokens). It allows users to register, login, and perform CRUD operations on posts, with authentication and authorization features based on roles (admin and regular users).
 
-![API Architecture](https://raw.githubusercontent.com/yourusername/your-repo-name/main/assets/images/api-architecture.jpg)
+![API Architecture](https://github.com/HawaMuhumedAli/blog-app-mern-s/blob/ea61baa946cbcdc2f4ede5df078b93f60ed8971d/Screenshot%202025-01-31%20041926.png)
 
 ## Key Features:
 
