@@ -1,8 +1,6 @@
 # Blog Application
 
-# Blog Backend API
-
-This is a **Backend API** for a blogging platform built using **Node.js**, **Express.js**, **MongoDB**, and **JWT** (JSON Web Tokens). This API provides full CRUD operations for users and posts with a secure authentication system, file upload support, and role-based authorization.
+This is  for a blogging platform built using **Node.js**, **Express.js**, **MongoDB**, and **JWT** (JSON Web Tokens). This API provides full CRUD operations for users and posts with a secure authentication system, file upload support, and role-based authorization.
 
 ## Features
 
