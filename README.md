@@ -16,7 +16,7 @@ This is a backend API built with **Node.js**, **Express.js**, **MongoDB**, and *
    ![API Architecture](https://github.com/HawaMuhumedAli/blog-app-mern-s/blob/3da32962f3a3596db679d9b066535260e8b942d9/usersadmin.png)
              *User*: halimo
             *User pass*: halimo1234@r
- 
+  ![API Architecture](https://github.com/HawaMuhumedAli/blog-app-mern-s/blob/3da32962f3a3596db679d9b066535260e8b942d9/usersadmin.png)
 - **Password Hashing** using **bcrypt**  
 - **CRUD Operations** for users and posts  
 - **MongoDB Integration** with **Mongoose**  
