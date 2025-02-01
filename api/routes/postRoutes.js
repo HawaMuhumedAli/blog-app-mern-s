@@ -41,7 +41,7 @@ const {
 } = require('../controllers/postController');
 
 // Route to create a new post
-router.post('/createPost', uploadMiddleware.single('file'), createPost);
+router.post('/createPost/:id', uploadMiddleware.single('file'), createPost);
 
 // Get all posts with pagination
 router.get('/getAllPosts', getAllPosts);
